@@ -4,7 +4,7 @@ var db = require("../models");
 model.exports = function(app){
     app.get("/api/workouts", function(req, res){
         db.workout.find({})
-        .then(doWorkout => {
+        .then(dbWorkout => {
             res.json(dbWorkout);
         })
         .catch(err => {
